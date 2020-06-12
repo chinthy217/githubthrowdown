@@ -17,6 +17,4 @@ yarn start
 
 ## Project Structure
 
-.
-+-- \_src
-+--
+![Folder Structure](/public/folder_structure.png)
