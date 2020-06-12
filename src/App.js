@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Store from './store/index'
+import FetchGitHubUser from './components/organisms/FetchGitHubUser'
+import FetchGitHubProjects from './components/organisms/FetchGitHubProjects'
+import FetchRepoReadme from './components/organisms/FetchRepoReadme'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Store>
+      <Router>
+        <div className='App'>
+          <Switch>
+            <Route path='/' component={FetchGitHubUser} exact />
+            <Route path='/github-projects' component={FetchGitHubProjects} />
+            <Route path='/github-readme' component={FetchRepoReadme} />
+          </Switch>
+        </div>
+      </Router>
+    </Store>
+  )
 }
 
-export default App;
+export default App
