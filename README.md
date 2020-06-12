@@ -9,8 +9,8 @@ Make sure to check out my other project in my Code Sandbox. [Simple Form App Usi
 In the project directory, you can run:
 
 ```bash
-git clone
-cd
+git clone https://github.com/chinthy217/githubthrowdown.git
+cd githubthrowdown
 yarn
 yarn start
 ```
